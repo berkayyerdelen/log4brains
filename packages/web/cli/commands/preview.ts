@@ -47,7 +47,6 @@ export async function previewCommand(
   // @ts-ignore
   app.server.incrementalCache.incrementalOptions.dev = true; // eslint-disable-line @typescript-eslint/no-unsafe-member-access
 
-  // Create server and attach Next's request handler without returning a Promise
   const srv = createServer();
   const handler = app.getRequestHandler();
   srv.on("request", (req, res) => {
